@@ -39,3 +39,7 @@ else:
 
 # Cierra la sesión
 session.close()
+
+
+def actualizar_producto():
+    return None
