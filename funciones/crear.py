@@ -1,28 +1,28 @@
-from sqlalchemy.orm import Session                     # Importamos la clase Session para manejar sesiones con la base de datos
-from tablas.producto import Producto                   # Importamos el modelo Producto definido en tablas/producto.py
-from basedatos import engine                           # Importamos el engine para vincular la base de datos
+from tablas.producto import Producto  # Importamos la clase Producto del modelo
+from basedatos import Session  # Importamos la sesión de la base de datos
+
 
 def crear_producto():
-    """Función para añadir un nuevo producto al catálogo"""
+    session = Session()  # Iniciamos una sesión para conectarnos a la BBDD
+    print("Introduce los datos del nuevo producto")
 
-    # Crear una nueva sesión de base de datos
-    with Session(engine) as session:                   # Usamos un contexto para que la sesión se cierre sola al terminar
-        print("Introduce los datos del nuevo producto")
+    nombre = input("Nombre del producto: ")  # Pedimos nombre
+    descripcion = input("Descripción: ")  # Pedimos descripción
+    precio = float(input("Precio (€): "))  # Pedimos precio
+    stock = int(input("Stock: "))  # Pedimos stock (FALTABA)
 
-        nombre = input("Nombre del producto: ")        # Pedimos al usuario el nombre del producto
-        descripcion = input("Descripción: ")           # Pedimos una descripción
-        precio = float(input("Precio (€): "))          # Pedimos el precio y lo convertimos a float
+    nuevo_producto = Producto(  # Creamos un nuevo producto con los datos
+        nombre=nombre,
+        descripcion=descripcion,
+        precio=precio,
+        stock=stock
+    )
 
-        # Creamos una instancia de Producto con los datos introducidos
-        nuevo_producto = Producto(
-            nombre=nombre,
-            descripcion=descripcion,
-            precio=precio
-        )
-        session.add(nuevo_producto)                    # Añadimos el nuevo producto a la sesión
-        session.commit()                               # Guardamos los cambios en la base de datos
+    session.add(nuevo_producto)  # Añadimos el producto a la sesión
+    session.commit()  # Guardamos los cambios en la base de datos
+    print("Producto añadido correctamente.")
+    session.close()  # Cerramos la sesión
 
-        print(f"\n✅ Producto '{nombre}' añadido correctamente.")
 
 """
 Esta función crear_producto() permite al usuario añadir un nuevo producto al catálogo directamente desde la consola.
