@@ -30,5 +30,5 @@ def main():
         else:
             print("Opción no válida. Intenta de nuevo.")
 
-if _name_ == "_main_":
-    main()  # Ejecuta el programa cuando se ejecuta menu.py directamente
+if __name__ == "_main_":
+   main() # Ejecuta el programa cuando se ejecuta menu.py directamente
