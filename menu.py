@@ -10,6 +10,7 @@ def mostrar_menu():
     print("3. Actualizar producto")
     print("4. Eliminar producto")
     print("5. Salir")
+
 def main():
     while True:
         mostrar_menu()               # Muestra opciones en pantalla
