@@ -16,25 +16,26 @@ Todo esto a través de un menú interactivo en consola, con persistencia en base
 
 ## 📂 Estructura del Proyecto
 
-
-Gestor-de-cat-logos/
+Gestor_de_catalogos/
 ├── README.md               # Explicación general del proyecto
 ├── .gitignore              # Archivos ignorados por Git
 ├── basedatos.py            # Configuración de conexión a SQLite con SQLAlchemy
 ├── menu.py                 # Menú interactivo de consola
 ├── requirements.txt        # Lista de dependencias
+├── catalogo.db             # Base de datos SQLite
 ├── funciones/              # Funciones CRUD
-│   ├── alta.py             # Añadir productos
-│   ├── consultar.py        # Ver productos
-│   ├── modificar.py        # Editar productos
-│   ├── baja.py             # Eliminar productos
+│   ├── crear.py            # Añadir productos
+│   ├── leer.py             # Ver productos
+│   ├── actualizar.py       # Editar productos
+│   ├── eliminar.py         # Eliminar productos
 ├── tablas/                 # Modelos ORM
 │   └── producto.py         # Clase Producto generada desde SQLite
 
 
+
 ## FUNCIONES ÚTILES
 🔹 Uso programa
--- python3 codigo/menu.py → Iniciar el programa
+-- python3 menu.py → Iniciar el programa
 
 🔹 Gestión de Git
 -- git branch                       # Ver ramas locales
