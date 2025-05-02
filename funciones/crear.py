@@ -24,9 +24,9 @@ def crear_producto():
 
         print(f"\n✅ Producto '{nombre}' añadido correctamente.")
 
-
-
-
-
-
-
+"""
+Esta función crear_producto() permite al usuario añadir un nuevo producto al catálogo directamente desde la consola.
+Solicita al usuario que introduzca el nombre, descripción y precio del producto, crea una instancia de la clase Producto, y la guarda en la base de datos usando SQLAlchemy.
+Usa un bloque with para asegurar que la sesión se cierre correctamente, y confirma con un mensaje que la operación se ha realizado con éxito.
+Es el primer paso para construir un CRUD completo.
+"""
