@@ -9,8 +9,8 @@ def mostrar_productos():
         productos = session.query(Producto).all()    # Consultamos todos los productos existentes
 
         if productos:                                # Si hay productos en la lista
-            print("\n📦 Lista de productos:")
+            print("\nLista de productos:")
             for p in productos:                      # Recorremos cada producto
                 print(f"ID: {p.id} | Nombre: {p.nombre} | Precio: {p.precio} € | Descripción: {p.descripcion}")
         else:
-            print("\n⚠️ No hay productos registrados.")
+            print("\n⚠No hay productos registrados.")

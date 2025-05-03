@@ -23,6 +23,6 @@ def actualizar_producto():
         else:
             print("Producto no encontrado.")
     except ValueError:
-        print("❌ ID, precio o stock no válidos.")
+        print("ID, precio o stock no válidos.")
     finally:
         session.close()

@@ -8,7 +8,7 @@ def eliminar_producto():
         try:
             id_producto = int(input("Introduce el ID del producto que quieres eliminar: "))  # Pedimos el ID al usuario
         except ValueError:
-            print("⚠  El ID debe ser un número entero.")
+            print("El ID debe ser un número entero.")
             return
 
         producto = session.get(Producto, id_producto)  # Buscamos el producto con ese ID
@@ -16,9 +16,9 @@ def eliminar_producto():
         if producto:  # Si se encuentra el producto
             session.delete(producto)  # Lo marcamos para eliminar
             session.commit()  # Confirmamos la eliminación
-            print(f"✅ Producto con ID {id_producto} eliminado correctamente.")
+            print(f"Producto con ID {id_producto} eliminado correctamente.")
         else:
-            print("❌ No se encontró ningún producto con ese ID.")
+            print("No se encontró ningún producto con ese ID.")
 
 
 
