@@ -52,6 +52,13 @@ Gestor_de_catalogos/
 -- .schema producto                 # Ver la estructura de la tabla producto
 -- .quit                            # Salir del modo SQLite
 
+## Dependencias y requisitos
+
+Es muy importante mantener actualizado el archivo `requirements.txt`. Puesto que es fundamental para cualquier proyecto en Python que vaya a utilizar librerías externas.
+
+Si se instalan nuevas librerías y no se añaden a este archivo, pueden encontrarse con errores al intentar instalar las dependencias usando: pip install -r requirements.txt.
+
+
 
 
 
